@@ -1,0 +1,171 @@
+/**
+ * globals.css — OpenCode design system tokens + JetBrains Mono typography.
+ *
+ * Uses Tailwind v4's @theme directive to expose all design tokens
+ * as utility classes (e.g. bg-canvas, text-ink, border-hairline).
+ *
+ * References:
+ *   DESIGN-opencode.ai.md — full token specification
+ */
+
+@import "tailwindcss";
+
+@theme {
+  /* ── Typography ── */
+  --font-mono: var(--font-jetbrains), "IBM Plex Mono", ui-monospace,
+    SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    monospace;
+
+  /* ── Brand & Ink ── */
+  --color-ink: #201d1d;
+  --color-ink-deep: #0f0000;
+  --color-charcoal: #302c2c;
+  --color-body: #424245;
+  --color-mute: #646262;
+  --color-stone: #6e6e73;
+  --color-ash: #9a9898;
+
+  /* ── Surface / Background ── */
+  --color-canvas: #fdfcfc;
+  --color-surface-soft: #f8f7f7;
+  --color-surface-card: #f1eeee;
+  --color-surface-dark: #201d1d;
+  --color-surface-dark-elevated: #302c2c;
+  --color-on-dark: #fdfcfc;
+  --color-on-dark-mute: #9a9898;
+
+  /* ── Semantic (reserved for in-TUI use) ── */
+  --color-accent: #007aff;
+  --color-danger: #ff3b30;
+  --color-warning: #ff9f0a;
+  --color-success: #30d158;
+
+  /* ── Spacing ── */
+  --spacing-section: 96px;
+
+  /* ── Border radius ── */
+  --radius-interactive: 4px;
+}
+
+/* ─────────────────────────────────────────────────────── */
+/* Base Reset                                              */
+/* ─────────────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #fdfcfc;
+  color: #201d1d;
+  font-family: var(--font-mono), "IBM Plex Mono", ui-monospace, monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #fdfcfc;
+  color: #201d1d;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ─────────────────────────────────────────────────────── */
+/* Hairline border utility (rgba doesn't map to Tailwind)  */
+/* ─────────────────────────────────────────────────────── */
+
+.border-hairline {
+  border: 1px solid rgba(15, 0, 0, 0.12);
+}
+
+.border-hairline-top {
+  border-top: 1px solid rgba(15, 0, 0, 0.12);
+}
+
+.border-hairline-bottom {
+  border-bottom: 1px solid rgba(15, 0, 0, 0.12);
+}
+
+.border-hairline-strong {
+  border: 1px solid #646262;
+}
+
+/* ─────────────────────────────────────────────────────── */
+/* Card hover interaction                                  */
+/* ─────────────────────────────────────────────────────── */
+
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(32, 29, 29, 0.1);
+}
+
+/* ─────────────────────────────────────────────────────── */
+/* ASCII wordmark — keeps line breaks and spacing intact   */
+/* ─────────────────────────────────────────────────────── */
+
+.ascii-wordmark {
+  font-family: var(--font-mono), monospace;
+  font-size: clamp(4px, 0.8vw, 9px);
+  line-height: 1.2;
+  white-space: pre;
+  letter-spacing: 0;
+  color: #fdfcfc;
+  overflow: hidden;
+}
+
+/* ─────────────────────────────────────────────────────── */
+/* TUI cursor blink                                        */
+/* ─────────────────────────────────────────────────────── */
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  display: inline-block;
+  width: 8px;
+  height: 1em;
+  background-color: #fdfcfc;
+  animation: blink 1.2s step-end infinite;
+  vertical-align: text-bottom;
+}
+
+/* ─────────────────────────────────────────────────────── */
+/* Project card screenshot placeholder                     */
+/* ─────────────────────────────────────────────────────── */
+
+.screenshot-placeholder {
+  background-color: #201d1d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9a9898;
+  font-size: 12px;
+  font-family: var(--font-mono), monospace;
+}
+
+/* ─────────────────────────────────────────────────────── */
+/* Scrollbar styling (optional, webkit only)               */
+/* ─────────────────────────────────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #fdfcfc;
+}
+::-webkit-scrollbar-thumb {
+  background: #9a9898;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #646262;
+}
