@@ -31,8 +31,8 @@ export const profile: Profile = {
   bio: "A full-stack software engineer who thrives both as a focused individual contributor and as a reliable team collaborator. I build clean, scalable, and maintainable applications — from database schema to polished UI — with modern web technologies and a bias for performance.",
 
   // ── Update these with your real contact info ──
-  phone: "+62 821 0000 0000",
-  email: "rai@wirawan.dev",
+  phone: "+6287890318741",
+  email: "raiwirawann@gmail.com",
   linkedin: "https://linkedin.com/in/raiwirawan",
   github: "https://github.com/raiwirawan",
   twitter: "https://x.com/raiwirawan",
@@ -47,73 +47,52 @@ export const profile: Profile = {
 export const repos: Repo[] = [
   {
     id: "repo-1",
-    name: "rai-portfolio",
+    name: "auliadekorin",
     description:
-      "Personal portfolio website built with Next.js 16, React 19, TypeScript, and Tailwind CSS. Styled after the OpenCode.ai terminal-aesthetic design system.",
-    stack: [
-      { label: "Next.js" },
-      { label: "TypeScript" },
-      { label: "Tailwind CSS" },
-      { label: "React 19" },
-    ],
-    githubUrl: "https://github.com/raiwirawan/rai-portfolio",
-    language: "TypeScript",
+      "Wedding Decor, Make Up Artist, and Wedding Attire showcase landing page. There is also a feature for creating wedding invitation landing pages that is accessible exclusively to AuliaDekorin admins via /login and /dashboard.",
+    stack: [{ label: "Web" }],
+    githubUrl: "https://github.com/raiwirawan/auliadekorin",
   },
   {
     id: "repo-2",
-    name: "expense-tracker-api",
+    name: "landing-page-uts-pbw",
     description:
-      "RESTful API for personal expense tracking with JWT authentication, budget management, category tagging, and monthly analytics endpoints.",
-    stack: [
-      { label: "Node.js" },
-      { label: "Express" },
-      { label: "PostgreSQL" },
-      { label: "Prisma" },
-    ],
-    githubUrl: "https://github.com/raiwirawan/expense-tracker-api",
-    language: "JavaScript",
+      "Project landing page for the Web-Based Programming (PBW) course midterm exam.",
+    stack: [{ label: "Web" }],
+    githubUrl: "https://github.com/raiwirawan/landing-page-uts-pbw",
   },
   {
     id: "repo-3",
-    name: "chat-app-realtime",
+    name: "carlagreycia-birthday",
     description:
-      "Real-time chat application with WebSocket support, public and private rooms, message history, and read receipts — built in a weekend.",
-    stack: [
-      { label: "React" },
-      { label: "Socket.io" },
-      { label: "Node.js" },
-      { label: "MongoDB" },
-    ],
-    githubUrl: "https://github.com/raiwirawan/chat-app-realtime",
-    language: "JavaScript",
+      "This is a landing page for a birthday invitation for a friend who is celebrating their sweet seventeen.",
+    stack: [{ label: "Web" }],
+    githubUrl: "https://github.com/raiwirawan/carlagreycia-birthday",
   },
   {
     id: "repo-4",
-    name: "ml-image-classifier",
+    name: "uts-pemrograman-mobile",
     description:
-      "Image classification pipeline using CNNs. Trained on a custom dataset with 10 categories. Achieves 94% validation accuracy. Includes Jupyter notebooks and a FastAPI inference endpoint.",
-    stack: [
-      { label: "Python" },
-      { label: "TensorFlow" },
-      { label: "Scikit-learn" },
-      { label: "FastAPI" },
-    ],
-    githubUrl: "https://github.com/raiwirawan/ml-image-classifier",
-    language: "Python",
+      "This is the repository for the Mobile Programming midterm project, prepared by: Rai (2301010020), Farrel (2301010017), Lutfi (2301010039), and Nakamanda (2301010015).",
+    stack: [{ label: "Mobile" }],
+    githubUrl: "https://github.com/raiwirawan/uts-pemrograman-mobile",
   },
   {
     id: "repo-5",
-    name: "ui-component-library",
+    name: "pemrograman-mobile",
     description:
-      "A reusable React component library with full TypeScript support, Storybook documentation, and automated visual regression tests. Published to NPM.",
-    stack: [
-      { label: "React" },
-      { label: "TypeScript" },
-      { label: "Storybook" },
-      { label: "Rollup" },
-    ],
-    githubUrl: "https://github.com/raiwirawan/ui-component-library",
+      "This is my final exam project for the Mobile Programming course, in which I used React Native and Expo.",
+    stack: [{ label: "React Native" }, { label: "Expo" }],
+    githubUrl: "https://github.com/raiwirawan/pemrograman-mobile",
     language: "TypeScript",
+  },
+  {
+    id: "repo-6",
+    name: "visibilitas",
+    description:
+      "This is a landing page project I created for the Bali Startup Camp held at Primakara University. The project aims to showcase clothing designed by artists with disabilities.",
+    stack: [{ label: "Web" }],
+    githubUrl: "https://github.com/wiraonedev/visibilitas",
   },
 ];
 
@@ -124,17 +103,18 @@ export const repos: Repo[] = [
 export const projects: Project[] = [
   {
     id: "project-1",
-    name: "TaskFlow — Project Management SaaS",
+    name: "AuliaDekorin — Wedding Showcase",
     description:
-      "A full-featured project management tool with Kanban boards, task assignments, due dates, team collaboration, and real-time activity feeds. Deployed on Vercel with a Supabase backend.",
+      "Wedding Decor, Make Up Artist, and Wedding Attire showcase landing page. There is also a feature for creating wedding invitation landing pages that is accessible exclusively to AuliaDekorin admins via /login and /dashboard.",
     stack: [
       { label: "Next.js" },
-      { label: "Supabase" },
       { label: "Tailwind CSS" },
-      { label: "Vercel" },
+      { label: "React" },
     ],
-    liveUrl: "https://taskflow.raiwirawan.dev",
-    githubUrl: "https://github.com/raiwirawan/taskflow",
+    liveUrl: "https://auliadekorin.vercel.app/",
+    loginUrl: "https://auliadekorin.vercel.app/login",
+    githubUrl: "https://github.com/raiwirawan/auliadekorin",
+    screenshotSrc: "/images/auliadekorin_vercel_app.webp",
   },
   {
     id: "project-2",

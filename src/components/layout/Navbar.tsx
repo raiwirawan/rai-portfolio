@@ -40,6 +40,7 @@ const NAV_LINKS: NavLink[] = [
  */
 export default function Navbar({ profile }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hireMenuOpen, setHireMenuOpen] = useState(false);
 
   const handleMenuToggle = () => setMenuOpen((prev) => !prev);
   const handleMenuClose = () => setMenuOpen(false);
@@ -86,14 +87,45 @@ export default function Navbar({ profile }: NavbarProps) {
           {/* ── Right: Contact CTA + Mobile Hamburger ── */}
           <div className="flex items-center gap-4">
             {/* Hire Me CTA — always visible */}
-            <a
-              href={`mailto:${profile.email}`}
-              className="h-9 px-5 bg-ink text-canvas text-sm font-medium hover:bg-ink-deep transition-colors inline-flex items-center"
-              style={{ borderRadius: "4px" }}
-              aria-label="Send a hiring email"
-            >
-              Hire Me
-            </a>
+            <div className="relative">
+              <button
+                type="button"
+                onClick={() => setHireMenuOpen((prev) => !prev)}
+                className="h-9 px-5 bg-ink text-canvas text-sm font-medium hover:bg-ink-deep transition-colors inline-flex items-center"
+                style={{ borderRadius: "4px" }}
+                aria-haspopup="menu"
+                aria-expanded={hireMenuOpen}
+              >
+                Hire Me
+              </button>
+              
+              {hireMenuOpen && (
+                <div 
+                  className="absolute right-0 top-full mt-2 w-48 bg-canvas border-hairline shadow-sm flex flex-col z-50 overflow-hidden"
+                  style={{ borderRadius: "4px" }}
+                  role="menu"
+                >
+                  <a
+                    href={`mailto:${profile.email}`}
+                    className="px-4 py-3 text-sm text-ink hover:bg-surface-soft transition-colors border-hairline-bottom"
+                    role="menuitem"
+                    onClick={() => setHireMenuOpen(false)}
+                  >
+                    ✉️ Email
+                  </a>
+                  <a
+                    href={`https://wa.me/${profile.phone.replace(/\D/g, '')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-3 text-sm text-ink hover:bg-surface-soft transition-colors"
+                    role="menuitem"
+                    onClick={() => setHireMenuOpen(false)}
+                  >
+                    💬 WhatsApp
+                  </a>
+                </div>
+              )}
+            </div>
 
             {/* Hamburger — mobile only */}
             <button
