@@ -5,7 +5,7 @@
  * @file src/data/portfolio.ts
  */
 
-import type { Profile, Repo, Project, Design } from "@/types/portfolio";
+import type { Profile, Repo, Project, Design, Experience, Education, SkillCategory } from "@/types/portfolio";
 
 // ─────────────────────────────────────────────
 // PROFILE
