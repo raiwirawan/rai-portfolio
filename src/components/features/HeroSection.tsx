@@ -115,11 +115,13 @@ export default function HeroSection({ profile }: HeroSectionProps) {
               Contact
             </p>
             <a
-              href={`tel:${profile.phone.replace(/\s/g, "")}`}
+              href={`https://wa.me/${profile.phone.replace(/\D/g, '')}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm text-ink hover:text-mute transition-colors"
-              aria-label={`Call ${profile.phone}`}
+              aria-label={`WhatsApp ${profile.phone}`}
             >
-              <span className="text-mute" aria-hidden="true">[tel]</span>
+              <span className="text-mute" aria-hidden="true">[wa]</span>
               {profile.phone}
             </a>
             <a

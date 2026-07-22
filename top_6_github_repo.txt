@@ -1,0 +1,32 @@
+[
+	{
+		id: 1,
+		github_repo_url: "https://github.com/raiwirawan/auliadekorin",
+		github_repo_desc: "Wedding Decor, Make Up Artist, and Wedding Attire showcase landing page. There is also a feature for creating wedding invitation landing pages that is accessible exclusively to AuliaDekorin admins via /login and /dashboard."
+	},
+	{
+		id: 2,
+		github_repo_url: "https://github.com/raiwirawan/landing-page-uts-pbw",
+		github_repo_desc: "Project landing page for the Web-Based Programming (PBW) course midterm exam."
+	},
+	{
+		id: 3,
+		github_repo_url: "https://github.com/raiwirawan/carlagreycia-birthday",
+		github_repo_desc: "This is a landing page for a birthday invitation for a friend who is celebrating their sweet seventeen."
+	},
+	{
+		id: 4,
+		github_repo_url: "https://github.com/raiwirawan/uts-pemrograman-mobile",
+		github_repo_desc: "This is the repository for the Mobile Programming midterm project, prepared by: Rai (2301010020), Farrel (2301010017), Lutfi (2301010039), and Nakamanda (2301010015)."
+	},
+	{
+		id: 5,
+		github_repo_url: "https://github.com/raiwirawan/pemrograman-mobile",
+		github_repo_desc: "This is my final exam project for the Mobile Programming course, in which I used React Native and Expo."
+	},
+	{
+		id: 6,
+		github_repo_url: "https://github.com/wiraonedev/visibilitas",
+		github_repo_desc: "This is a landing page project I created for the Bali Startup Camp held at Primakara University. The project aims to showcase clothing designed by artists with disabilities."
+	},
+]

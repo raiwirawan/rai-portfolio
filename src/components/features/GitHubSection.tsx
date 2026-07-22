@@ -32,7 +32,9 @@ export default function GitHubSection({ repos }: GitHubSectionProps) {
 
       {/* Stat sub-header */}
       <p className="text-sm text-mute mb-8">
-        <span className="text-ink font-medium">Top 5 repositories</span>
+        <span className="text-ink font-medium">
+          Top {repos.length} repositories
+        </span>
         {" · "}
         Open source contributions and personal projects
       </p>

@@ -90,6 +90,18 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           >
             🔗 Live Demo
           </a>
+          {project.loginUrl && (
+            <a
+              href={project.loginUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center h-9 px-5 bg-ink text-canvas text-sm font-medium hover:bg-ink-deep transition-colors"
+              style={{ borderRadius: "4px" }}
+              aria-label={`Admin Login for ${project.name}`}
+            >
+              🔐 Admin Login
+            </a>
+          )}
           <a
             href={project.githubUrl}
             target="_blank"

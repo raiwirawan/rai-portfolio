@@ -57,6 +57,8 @@ export interface Project {
   stack: TechBadge[];
   /** Public URL of the live deployment */
   liveUrl: string;
+  /** Admin Login URL (optional) */
+  loginUrl?: string;
   /** GitHub repository URL */
   githubUrl: string;
   /** Path to screenshot image relative to /public */
