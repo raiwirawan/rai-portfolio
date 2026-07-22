@@ -20,8 +20,8 @@ export interface Profile {
   linkedin: string;
   /** GitHub profile URL */
   github: string;
-  /** Twitter / X profile URL (optional) */
-  twitter?: string;
+  /** Instagram profile URL (optional) */
+  instagram?: string;
   /** Path to profile photo relative to /public */
   photoSrc: string;
 }

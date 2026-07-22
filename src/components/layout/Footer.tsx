@@ -34,8 +34,8 @@ export default function Footer({ profile }: FooterProps) {
     { label: "GitHub", href: profile.github, external: true },
     { label: "LinkedIn", href: profile.linkedin, external: true },
     { label: "Email", href: `mailto:${profile.email}`, external: false },
-    ...(profile.twitter
-      ? [{ label: "X / Twitter", href: profile.twitter, external: true }]
+    ...(profile.instagram
+      ? [{ label: "Instagram", href: profile.instagram, external: true }]
       : []),
     { label: "Top ↑", href: "#hero", external: false },
   ];

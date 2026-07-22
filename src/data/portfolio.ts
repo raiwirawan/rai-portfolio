@@ -33,9 +33,9 @@ export const profile: Profile = {
   // ── Update these with your real contact info ──
   phone: "+6287890318741",
   email: "raiwirawann@gmail.com",
-  linkedin: "https://linkedin.com/in/raiwirawan",
+  linkedin: "https://www.linkedin.com/in/raiwirawan",
   github: "https://github.com/raiwirawan",
-  twitter: "https://x.com/raiwirawan",
+  instagram: "https://www.instagram.com/raiwirawann/",
 
   photoSrc: "/images/profile.jpg",
 };
@@ -129,6 +129,7 @@ export const projects: Project[] = [
     ],
     liveUrl: "https://rai-wirawan.vercel.app/",
     githubUrl: "https://github.com/raiwirawan/rai-portfolio",
+    screenshotSrc: "/images/rai-wirawan_vercel_app.webp",
   },
 ];
 
@@ -139,23 +140,23 @@ export const projects: Project[] = [
 export const designs: Design[] = [
   {
     id: "design-1",
-    name: "E-Commerce Mobile App",
+    name: "AuliaDekorin",
     description:
-      "A complete mobile shopping experience with a modern card-based product grid, immersive product detail pages, smooth checkout flow, and a personalized home feed. Focused on reducing time-to-purchase.",
-    figmaUrl: "https://figma.com/file/placeholder-ecommerce",
+      "Ini adalah high fidelity prototype dari proyek AuliaDekorin saya yang bisa Anda kunjungi di live project ataupun repository githubnya",
+    figmaUrl: "https://www.figma.com/design/AHHRwDG8AZ5UvRn5CGOSda/Everlasting--Sebelum-AuliaDekorin-?node-id=1-1045&p=f&t=aWnnLZiXan3gCZOk-0",
   },
   {
     id: "design-2",
-    name: "SaaS Analytics Dashboard",
+    name: "NoteApp UI",
     description:
-      "A data-rich admin dashboard for a SaaS product. Designed with strong information hierarchy, custom chart components, a collapsible sidebar, and a dark-mode-first color system.",
-    figmaUrl: "https://figma.com/file/placeholder-dashboard",
+      "Ini adalah proyek dari tugas kuliah saya, dimana saya ditugaskan untuk membuat desain aplikasi secara bebas, dan saya memutuskan untuk membuat desain aplikasi catatan.",
+    figmaUrl: "https://www.figma.com/design/3wFhkkC8qbYg9a9673LqhN/NoteApp-Design?node-id=0-1&p=f&t=NAT4rQzRjDnEaPKt-0",
   },
   {
     id: "design-3",
-    name: "Banking Super App",
+    name: "Fashion App UI",
     description:
-      "A comprehensive banking application design featuring biometric authentication, investment portfolio tracking, peer-to-peer transfers, and a card management system. Dark mode with high-contrast accessibility.",
-    figmaUrl: "https://figma.com/file/placeholder-banking",
+      "Ini adalah tugas dari mata kuliah User Interface Design saya, dimana saya membuat aplikasi jual baju.",
+    figmaUrl: "https://www.figma.com/design/ndvMkSbmtElejHX6IwOgCV/UID-Prototyping?t=08X42o7VGXXcFQrh-0",
   },
 ];
