@@ -31,6 +31,9 @@ interface NavLink {
 
 const NAV_LINKS_EN: NavLink[] = [
   { label: "About", href: "#hero" },
+  { label: "Skills", href: "#skills" },
+  { label: "Experience", href: "#experience" },
+  { label: "Education", href: "#education" },
   { label: "Repos", href: "#repos" },
   { label: "Projects", href: "#projects" },
   { label: "Designs", href: "#designs" },
@@ -38,6 +41,9 @@ const NAV_LINKS_EN: NavLink[] = [
 
 const NAV_LINKS_ID: NavLink[] = [
   { label: "Tentang", href: "#hero" },
+  { label: "Keahlian", href: "#skills" },
+  { label: "Pengalaman", href: "#experience" },
+  { label: "Edukasi", href: "#education" },
   { label: "Repos", href: "#repos" },
   { label: "Proyek", href: "#projects" },
   { label: "Desain", href: "#designs" },

@@ -4,10 +4,13 @@
  * Assembles all sections in order:
  *   1. Navbar (sticky, smooth-scroll anchor links)
  *   2. HeroSection (TUI mockup + profile split-screen)
- *   3. GitHubSection (top 5 repos)
- *   4. ProjectsSection (live hosted websites)
- *   5. DesignsSection (Figma UI showcase)
- *   6. Footer
+ *   3. SkillsSection
+ *   4. ExperienceSection
+ *   5. EducationSection
+ *   6. GitHubSection (top 5 repos)
+ *   7. ProjectsSection (live hosted websites)
+ *   8. DesignsSection (Figma UI showcase)
+ *   9. Footer
  *
  * All data is imported from src/data/portfolio.ts — no runtime API calls.
  * Navigation uses native anchor scrolling with CSS scroll-behavior: smooth.
@@ -21,7 +24,10 @@ import HeroSection from "@/components/features/HeroSection";
 import GitHubSection from "@/components/features/GitHubSection";
 import ProjectsSection from "@/components/features/ProjectsSection";
 import DesignsSection from "@/components/features/DesignsSection";
-import { profile, repos, projects, designs } from "@/data/portfolio";
+import SkillsSection from "@/components/features/SkillsSection";
+import ExperienceSection from "@/components/features/ExperienceSection";
+import EducationSection from "@/components/features/EducationSection";
+import { profile, repos, projects, designs, skills, experiences, education } from "@/data/portfolio";
 
 /**
  * Root page — Server Component assembling the full SPA.
@@ -42,7 +48,31 @@ export default function Home() {
           <div className="border-hairline-bottom mb-24" aria-hidden="true" />
         </div>
 
-        {/* Section 2: GitHub Dashboard */}
+        {/* Section 2: Skills */}
+        <SkillsSection skills={skills} />
+
+        {/* Hairline section divider */}
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="border-hairline-bottom mb-24" aria-hidden="true" />
+        </div>
+
+        {/* Section 3: Work Experience */}
+        <ExperienceSection experiences={experiences} />
+
+        {/* Hairline section divider */}
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="border-hairline-bottom mb-24" aria-hidden="true" />
+        </div>
+
+        {/* Section 4: Education */}
+        <EducationSection education={education} />
+
+        {/* Hairline section divider */}
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="border-hairline-bottom mb-24" aria-hidden="true" />
+        </div>
+
+        {/* Section 5: GitHub Dashboard */}
         <GitHubSection repos={repos} />
 
         {/* Hairline section divider */}
@@ -50,7 +80,7 @@ export default function Home() {
           <div className="border-hairline-bottom mb-24" aria-hidden="true" />
         </div>
 
-        {/* Section 3: Live Projects */}
+        {/* Section 6: Live Projects */}
         <ProjectsSection projects={projects} />
 
         {/* Hairline section divider */}
@@ -58,7 +88,7 @@ export default function Home() {
           <div className="border-hairline-bottom mb-24" aria-hidden="true" />
         </div>
 
-        {/* Section 4: UI Design Showcase */}
+        {/* Section 7: UI Design Showcase */}
         <DesignsSection designs={designs} />
       </main>
 

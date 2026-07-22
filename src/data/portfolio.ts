@@ -188,3 +188,165 @@ export const designs: Design[] = [
     figmaUrl: "https://www.figma.com/design/ndvMkSbmtElejHX6IwOgCV/UID-Prototyping?t=08X42o7VGXXcFQrh-0",
   },
 ];
+
+// ─────────────────────────────────────────────
+// WORK EXPERIENCE
+// ─────────────────────────────────────────────
+
+export const experiences: Experience[] = [
+  {
+    id: "exp-1",
+    role: {
+      en: "Web Developer Intern",
+      id: "Magang Pengembang Web",
+    },
+    company: "Pilar Kreatif",
+    period: {
+      en: "May 2022 – Sept 2022",
+      id: "Mei 2022 – Sept 2022",
+    },
+    responsibilities: [
+      {
+        en: "Built landing pages using HTML, CSS, and JavaScript to specification for external clients.",
+        id: "Membangun halaman landing menggunakan HTML, CSS, dan JavaScript sesuai spesifikasi untuk klien eksternal.",
+      },
+      {
+        en: "Managed and updated content as web admin for a travel landing page.",
+        id: "Mengelola dan memperbarui konten sebagai admin web untuk halaman landing perjalanan.",
+      },
+      {
+        en: "Used a no-code web builder to deliver landing pages on tight turnaround times.",
+        id: "Menggunakan pembuat web tanpa kode untuk menyelesaikan halaman landing dengan waktu pengerjaan yang ketat.",
+      },
+      {
+        en: "Developed front-end components with React JS, strengthening component-based UI development skills.",
+        id: "Mengembangkan komponen front-end dengan React JS, memperkuat keterampilan pengembangan UI berbasis komponen.",
+      },
+    ],
+  },
+  {
+    id: "exp-2",
+    role: {
+      en: "Final Project — School Fee Payment System",
+      id: "Proyek Akhir — Sistem Pembayaran Uang Sekolah",
+    },
+    company: "Wira Harapan Vocational High School",
+    period: {
+      en: "April 2023",
+      id: "April 2023",
+    },
+    responsibilities: [
+      {
+        en: "Designed a relational database schema for a school fee payment application.",
+        id: "Merancang skema basis data relasional untuk aplikasi pembayaran uang sekolah.",
+      },
+      {
+        en: "Built the application using PHP, MySQL, and Apache on a local XAMPP environment.",
+        id: "Membangun aplikasi menggunakan PHP, MySQL, dan Apache pada lingkungan lokal XAMPP.",
+      },
+      {
+        en: "Implemented the dashboard UI with SB Admin and Bootstrap CSS for a responsive interface.",
+        id: "Mengimplementasikan UI dasbor dengan SB Admin dan CSS Bootstrap untuk antarmuka yang responsif.",
+      },
+    ],
+  },
+];
+
+// ─────────────────────────────────────────────
+// EDUCATION
+// ─────────────────────────────────────────────
+
+export const education: Education[] = [
+  {
+    id: "edu-1",
+    degree: {
+      en: "Bachelor of Computer Science, Information Systems",
+      id: "Sarjana Ilmu Komputer, Sistem Informasi",
+    },
+    institution: {
+      en: "Primakara University — University of Technology",
+      id: "Universitas Primakara — Universitas Teknologi",
+    },
+    period: {
+      en: "Aug 2023 – Present",
+      id: "Agt 2023 – Sekarang",
+    },
+    achievements: [
+      {
+        en: "Focused coursework on web, game, and mobile application development.",
+        id: "Fokus perkuliahan pada pengembangan aplikasi web, game, dan seluler.",
+      },
+      {
+        en: "Developed web applications using Next.js, React, TypeScript, Tailwind CSS, Supabase, and Firebase.",
+        id: "Mengembangkan aplikasi web menggunakan Next.js, React, TypeScript, Tailwind CSS, Supabase, dan Firebase.",
+      },
+    ],
+  },
+  {
+    id: "edu-2",
+    degree: {
+      en: "Software Engineering (Vocational)",
+      id: "Rekayasa Perangkat Lunak (Vokasi)",
+    },
+    institution: {
+      en: "Wira Harapan Vocational High School — Vocational High School of Tourism and Technology",
+      id: "SMK Wira Harapan — SMK Pariwisata dan Teknologi",
+    },
+    period: {
+      en: "Aug 2020 – July 2023",
+      id: "Agt 2020 – Juli 2023",
+    },
+    achievements: [
+      {
+        en: "Built programming logic foundations in C++ and Java.",
+        id: "Membangun fondasi logika pemrograman dengan C++ dan Java.",
+      },
+      {
+        en: "Completed a final project using PHP, Apache, and MySQL for web-based application development.",
+        id: "Menyelesaikan proyek akhir menggunakan PHP, Apache, dan MySQL untuk pengembangan aplikasi berbasis web.",
+      },
+    ],
+  },
+];
+
+// ─────────────────────────────────────────────
+// SKILLS & ADDITIONAL INFORMATION
+// ─────────────────────────────────────────────
+
+export const skills: SkillCategory[] = [
+  {
+    id: "skill-1",
+    category: {
+      en: "Languages & Frameworks",
+      id: "Bahasa & Framework",
+    },
+    items: ["JavaScript", "TypeScript", "Next.js", "React.js", "PHP", "Laravel"],
+  },
+  {
+    id: "skill-2",
+    category: {
+      en: "Database & Backend",
+      id: "Basis Data & Backend",
+    },
+    items: ["MySQL", "Supabase", "Firebase"],
+  },
+  {
+    id: "skill-3",
+    category: {
+      en: "Tools & Environment",
+      id: "Alat & Lingkungan",
+    },
+    items: ["XAMPP", "Apache Web Server"],
+  },
+  {
+    id: "skill-4",
+    category: {
+      en: "Certifications",
+      id: "Sertifikasi",
+    },
+    items: [
+      "Web Developer Internship — Pilar Kreatif",
+      "Participant, Google Developer Group Bali",
+    ],
+  },
+];
