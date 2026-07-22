@@ -82,3 +82,25 @@ export interface Design {
   /** Path to exported Figma mockup image relative to /public */
   thumbnailSrc?: string;
 }
+
+export interface Experience {
+  id: string;
+  role: LocalizedString;
+  company: string;
+  period: LocalizedString;
+  responsibilities: LocalizedString[];
+}
+
+export interface Education {
+  id: string;
+  degree: LocalizedString;
+  institution: LocalizedString;
+  period: LocalizedString;
+  achievements: LocalizedString[];
+}
+
+export interface SkillCategory {
+  id: string;
+  category: LocalizedString;
+  items: string[];
+}
