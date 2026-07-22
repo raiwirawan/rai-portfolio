@@ -55,11 +55,11 @@ export const repos: Repo[] = [
   },
   {
     id: "repo-2",
-    name: "landing-page-uts-pbw",
+    name: "rai-portfolio",
     description:
-      "Project landing page for the Web-Based Programming (PBW) course midterm exam.",
-    stack: [{ label: "Web" }],
-    githubUrl: "https://github.com/raiwirawan/landing-page-uts-pbw",
+      "This is my portfolio website, where you can view my educational background, the projects I have worked on, my skills, and my contact information.",
+    stack: [{ label: "Next.js" }, { label: "TypeScript" }, { label: "Tailwind CSS" }],
+    githubUrl: "https://github.com/raiwirawan/rai-portfolio",
   },
   {
     id: "repo-3",
