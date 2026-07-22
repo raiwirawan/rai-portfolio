@@ -118,31 +118,17 @@ export const projects: Project[] = [
   },
   {
     id: "project-2",
-    name: "StoreFront — E-Commerce Platform",
+    name: "Rai Wirawan — Personal Portfolio",
     description:
-      "A production-grade e-commerce platform with cart management, Stripe payment integration, order tracking, and an admin dashboard for inventory and analytics.",
+      "Personal portfolio website built with Next.js, React, TypeScript, and Tailwind CSS. Styled after a terminal-aesthetic design system with responsive layouts and smooth scroll navigation.",
     stack: [
       { label: "Next.js" },
-      { label: "Stripe" },
-      { label: "PostgreSQL" },
-      { label: "Prisma" },
+      { label: "React" },
+      { label: "TypeScript" },
+      { label: "Tailwind CSS" },
     ],
-    liveUrl: "https://storefront.raiwirawan.dev",
-    githubUrl: "https://github.com/raiwirawan/storefront",
-  },
-  {
-    id: "project-3",
-    name: "DevLog — Developer Blog Platform",
-    description:
-      "A developer-focused blog with MDX content authoring, syntax-highlighted code blocks, reading time estimates, tag filtering, and newsletter subscription via Resend.",
-    stack: [
-      { label: "Next.js" },
-      { label: "MDX" },
-      { label: "Contentlayer" },
-      { label: "Resend" },
-    ],
-    liveUrl: "https://devlog.raiwirawan.dev",
-    githubUrl: "https://github.com/raiwirawan/devlog",
+    liveUrl: "https://rai-wirawan.vercel.app/",
+    githubUrl: "https://github.com/raiwirawan/rai-portfolio",
   },
 ];
 
