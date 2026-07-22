@@ -155,17 +155,17 @@ export default function HeroSection({ profile }: HeroSectionProps) {
             >
               LinkedIn
             </a>
-            {profile.twitter && (
+            {profile.instagram && (
               <>
                 <span className="text-ash" aria-hidden="true">·</span>
                 <a
-                  href={profile.twitter}
+                  href={profile.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-mute hover:text-ink transition-colors"
-                  aria-label="X / Twitter profile"
+                  aria-label="Instagram profile"
                 >
-                  X
+                  Instagram
                 </a>
               </>
             )}
