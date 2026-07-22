@@ -3,15 +3,20 @@
  * All data is hardcoded in src/data/portfolio.ts — no API calls at runtime.
  */
 
+export interface LocalizedString {
+  en: string;
+  id: string;
+}
+
 export interface Profile {
   /** Full name displayed in the hero section */
   name: string;
   /** Professional title / role */
-  title: string;
+  title: LocalizedString;
   /** ASCII block-pixel wordmark used in the TUI mockup (split into lines) */
   asciiWordmark: string[];
   /** Short bio paragraph(s) */
-  bio: string;
+  bio: LocalizedString;
   /** Phone number for tel: links */
   phone: string;
   /** Professional email for mailto: links */
@@ -37,7 +42,7 @@ export interface Repo {
   /** Repository name (e.g. "rai-portfolio") */
   name: string;
   /** Full description shown on the card */
-  description: string;
+  description: LocalizedString;
   /** Primary tech stack badges */
   stack: TechBadge[];
   /** Full GitHub repository URL */
@@ -52,7 +57,7 @@ export interface Project {
   /** Project / application name */
   name: string;
   /** What the project does and the problem it solves */
-  description: string;
+  description: LocalizedString;
   /** Tech stack used */
   stack: TechBadge[];
   /** Public URL of the live deployment */
@@ -71,7 +76,7 @@ export interface Design {
   /** Design project name */
   name: string;
   /** Aesthetic concept and UX approach */
-  description: string;
+  description: LocalizedString;
   /** Public Figma file URL */
   figmaUrl: string;
   /** Path to exported Figma mockup image relative to /public */

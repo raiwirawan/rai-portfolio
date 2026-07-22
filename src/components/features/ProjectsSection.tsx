@@ -7,9 +7,12 @@
  * @file src/components/features/ProjectsSection.tsx
  */
 
+'use client';
+
 import type { Project } from "@/types/portfolio";
 import SectionLabel from "@/components/ui/SectionLabel";
 import ProjectCard from "@/components/ui/ProjectCard";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface ProjectsSectionProps {
   projects: Project[];
@@ -19,6 +22,8 @@ interface ProjectsSectionProps {
  * Live Projects Showcase — production-hosted websites.
  */
 export default function ProjectsSection({ projects }: ProjectsSectionProps) {
+  const { language } = useLanguage();
+
   return (
     <section
       id="projects"
@@ -31,10 +36,10 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
       {/* Sub-header */}
       <p className="text-sm text-mute mb-8">
         <span className="text-ink font-medium">
-          {projects.length} projects
+          {language === 'id' ? `${projects.length} proyek` : `${projects.length} projects`}
         </span>
         {" · "}
-        Production-deployed applications in live environments
+        {language === 'id' ? 'Aplikasi yang di-deploy di lingkungan live' : 'Production-deployed applications in live environments'}
       </p>
 
       {/* Project Cards Grid */}

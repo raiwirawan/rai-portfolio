@@ -8,9 +8,12 @@
  * @file src/components/features/DesignsSection.tsx
  */
 
+'use client';
+
 import type { Design } from "@/types/portfolio";
 import SectionLabel from "@/components/ui/SectionLabel";
 import DesignCard from "@/components/ui/DesignCard";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface DesignsSectionProps {
   designs: Design[];
@@ -20,6 +23,8 @@ interface DesignsSectionProps {
  * UI Design Showcase — Figma design portfolio.
  */
 export default function DesignsSection({ designs }: DesignsSectionProps) {
+  const { language } = useLanguage();
+
   return (
     <section
       id="designs"
@@ -32,10 +37,10 @@ export default function DesignsSection({ designs }: DesignsSectionProps) {
       {/* Sub-header */}
       <p className="text-sm text-mute mb-8">
         <span className="text-ink font-medium">
-          {designs.length} design projects
+          {language === 'id' ? `${designs.length} proyek desain` : `${designs.length} design projects`}
         </span>
         {" · "}
-        Figma — UX/UI design work and prototypes
+        {language === 'id' ? 'Figma — karya desain UX/UI dan prototipe' : 'Figma — UX/UI design work and prototypes'}
       </p>
 
       {/* Design Cards Grid */}

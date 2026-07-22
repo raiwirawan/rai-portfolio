@@ -9,9 +9,12 @@
  * @file src/components/features/GitHubSection.tsx
  */
 
+'use client';
+
 import type { Repo } from "@/types/portfolio";
 import SectionLabel from "@/components/ui/SectionLabel";
 import RepoCard from "@/components/ui/RepoCard";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface GitHubSectionProps {
   repos: Repo[];
@@ -21,6 +24,8 @@ interface GitHubSectionProps {
  * GitHub Dashboard section — Top 5 repositories grid.
  */
 export default function GitHubSection({ repos }: GitHubSectionProps) {
+  const { language } = useLanguage();
+
   return (
     <section
       id="repos"
@@ -33,10 +38,10 @@ export default function GitHubSection({ repos }: GitHubSectionProps) {
       {/* Stat sub-header */}
       <p className="text-sm text-mute mb-8">
         <span className="text-ink font-medium">
-          Top {repos.length} repositories
+          {language === 'id' ? `Top ${repos.length} repositori` : `Top ${repos.length} repositories`}
         </span>
         {" · "}
-        Open source contributions and personal projects
+        {language === 'id' ? 'Kontribusi open source dan proyek pribadi' : 'Open source contributions and personal projects'}
       </p>
 
       {/* Repo Cards Grid */}

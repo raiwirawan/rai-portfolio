@@ -12,8 +12,11 @@
  * @file src/components/ui/DesignCard.tsx
  */
 
+'use client';
+
 import Image from "next/image";
 import type { Design } from "@/types/portfolio";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface DesignCardProps {
   design: Design;
@@ -23,6 +26,8 @@ interface DesignCardProps {
  * Figma design showcase card with thumbnail and direct link.
  */
 export default function DesignCard({ design }: DesignCardProps) {
+  const { language } = useLanguage();
+
   return (
     <article
       className="card-hover border-hairline flex flex-col bg-canvas overflow-hidden"
@@ -78,7 +83,7 @@ export default function DesignCard({ design }: DesignCardProps) {
 
         {/* Description */}
         <p className="text-sm text-body leading-relaxed flex-1">
-          {design.description}
+          {design.description[language]}
         </p>
 
         {/* ── CTA ── */}
@@ -90,7 +95,7 @@ export default function DesignCard({ design }: DesignCardProps) {
           style={{ borderRadius: "4px" }}
           aria-label={`Open ${design.name} in Figma`}
         >
-          Open in Figma →
+          {language === 'id' ? 'Buka di Figma →' : 'Open in Figma →'}
         </a>
       </div>
     </article>

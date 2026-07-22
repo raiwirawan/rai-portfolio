@@ -10,9 +10,12 @@
  * @file src/components/ui/ProjectCard.tsx
  */
 
+'use client';
+
 import Image from "next/image";
 import type { Project } from "@/types/portfolio";
 import Badge from "@/components/ui/Badge";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface ProjectCardProps {
   project: Project;
@@ -22,6 +25,8 @@ interface ProjectCardProps {
  * Live project card with screenshot thumbnail and dual CTAs.
  */
 export default function ProjectCard({ project }: ProjectCardProps) {
+  const { language } = useLanguage();
+
   return (
     <article
       className="card-hover border-hairline flex flex-col bg-canvas overflow-hidden"
@@ -68,7 +73,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
         {/* Description */}
         <p className="text-sm text-body leading-relaxed flex-1">
-          {project.description}
+          {project.description[language]}
         </p>
 
         {/* Tech Stack Badges */}
@@ -88,7 +93,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             style={{ borderRadius: "4px" }}
             aria-label={`Open live demo of ${project.name}`}
           >
-            🔗 Live Demo
+            🔗 {language === 'id' ? 'Demo Langsung' : 'Live Demo'}
           </a>
           {project.loginUrl && (
             <a
@@ -99,7 +104,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               style={{ borderRadius: "4px" }}
               aria-label={`Admin Login for ${project.name}`}
             >
-              🔐 Admin Login
+              🔐 Login Admin
             </a>
           )}
           <a
@@ -110,7 +115,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             style={{ borderRadius: "4px" }}
             aria-label={`View source code of ${project.name} on GitHub`}
           >
-            💻 Source Code
+            💻 {language === 'id' ? 'Kode Sumber' : 'Source Code'}
           </a>
         </div>
       </div>
