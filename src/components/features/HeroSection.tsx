@@ -13,8 +13,11 @@
  * @file src/components/features/HeroSection.tsx
  */
 
+'use client';
+
 import Image from "next/image";
 import type { Profile } from "@/types/portfolio";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface HeroSectionProps {
   profile: Profile;
@@ -24,6 +27,8 @@ interface HeroSectionProps {
  * Hero section integrating the OpenCode TUI mockup with the personal profile.
  */
 export default function HeroSection({ profile }: HeroSectionProps) {
+  const { language } = useLanguage();
+
   return (
     <section
       id="hero"
@@ -103,16 +108,16 @@ export default function HeroSection({ profile }: HeroSectionProps) {
             >
               {profile.name}
             </h1>
-            <p className="text-sm font-medium text-mute">{profile.title}</p>
+            <p className="text-sm font-medium text-mute">{profile.title[language]}</p>
           </div>
 
           {/* Bio */}
-          <p className="text-sm text-body leading-relaxed">{profile.bio}</p>
+          <p className="text-sm text-body leading-relaxed">{profile.bio[language]}</p>
 
           {/* Contact Panel */}
           <div className="border-hairline-top pt-4 space-y-2">
             <p className="text-xs font-bold text-mute mb-2 uppercase tracking-widest">
-              Contact
+              {language === 'id' ? 'Kontak' : 'Contact'}
             </p>
             <a
               href={`https://wa.me/${profile.phone.replace(/\D/g, '')}`}

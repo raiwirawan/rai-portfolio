@@ -15,8 +15,9 @@
  * @file src/components/layout/Navbar.tsx
  */
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { Profile } from "@/types/portfolio";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface NavbarProps {
   profile: Profile;
@@ -28,11 +29,18 @@ interface NavLink {
   href: string;
 }
 
-const NAV_LINKS: NavLink[] = [
+const NAV_LINKS_EN: NavLink[] = [
   { label: "About", href: "#hero" },
   { label: "Repos", href: "#repos" },
   { label: "Projects", href: "#projects" },
   { label: "Designs", href: "#designs" },
+];
+
+const NAV_LINKS_ID: NavLink[] = [
+  { label: "Tentang", href: "#hero" },
+  { label: "Repos", href: "#repos" },
+  { label: "Proyek", href: "#projects" },
+  { label: "Desain", href: "#designs" },
 ];
 
 /**
@@ -41,6 +49,9 @@ const NAV_LINKS: NavLink[] = [
 export default function Navbar({ profile }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [hireMenuOpen, setHireMenuOpen] = useState(false);
+  const { language, setLanguage, isInitialized } = useLanguage();
+
+  const navLinks = language === 'id' ? NAV_LINKS_ID : NAV_LINKS_EN;
 
   const handleMenuToggle = () => setMenuOpen((prev) => !prev);
   const handleMenuClose = () => setMenuOpen(false);
@@ -72,7 +83,7 @@ export default function Navbar({ profile }: NavbarProps) {
             className="hidden md:flex items-center gap-6 list-none m-0 p-0"
             role="list"
           >
-            {NAV_LINKS.map((link) => (
+            {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
@@ -86,6 +97,18 @@ export default function Navbar({ profile }: NavbarProps) {
 
           {/* ── Right: Contact CTA + Mobile Hamburger ── */}
           <div className="flex items-center gap-4">
+            {/* Language Toggle */}
+            {isInitialized && (
+              <button
+                type="button"
+                onClick={() => setLanguage(language === 'en' ? 'id' : 'en')}
+                className="text-sm font-bold text-mute hover:text-ink transition-colors tracking-widest uppercase"
+                aria-label="Toggle language"
+              >
+                {language === 'en' ? 'EN' : 'ID'}
+              </button>
+            )}
+
             {/* Hire Me CTA — always visible */}
             <div className="relative">
               <button
@@ -96,7 +119,7 @@ export default function Navbar({ profile }: NavbarProps) {
                 aria-haspopup="menu"
                 aria-expanded={hireMenuOpen}
               >
-                Hire Me
+                {language === 'id' ? 'Pekerjakan Saya' : 'Hire Me'}
               </button>
               
               {hireMenuOpen && (
@@ -160,7 +183,7 @@ export default function Navbar({ profile }: NavbarProps) {
           aria-label="Mobile navigation menu"
         >
           <ul className="max-w-5xl mx-auto px-6 py-4 flex flex-col gap-1 list-none m-0 p-0">
-            {NAV_LINKS.map((link) => (
+            {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}

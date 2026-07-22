@@ -11,7 +11,10 @@
  * @file src/components/layout/Footer.tsx
  */
 
+'use client';
+
 import type { Profile } from "@/types/portfolio";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface FooterProps {
   profile: Profile;
@@ -29,6 +32,7 @@ interface FooterLink {
  */
 export default function Footer({ profile }: FooterProps) {
   const currentYear = new Date().getFullYear();
+  const { language } = useLanguage();
 
   const footerLinks: FooterLink[] = [
     { label: "GitHub", href: profile.github, external: true },
@@ -37,7 +41,7 @@ export default function Footer({ profile }: FooterProps) {
     ...(profile.instagram
       ? [{ label: "Instagram", href: profile.instagram, external: true }]
       : []),
-    { label: "Top ↑", href: "#hero", external: false },
+    { label: language === 'id' ? "Atas ↑" : "Top ↑", href: "#hero", external: false },
   ];
 
   return (
@@ -83,7 +87,7 @@ export default function Footer({ profile }: FooterProps) {
             className="text-mute"
             style={{ fontSize: "14px", lineHeight: "2" }}
           >
-            Built with{" "}
+            {language === 'id' ? 'Dibuat dengan' : 'Built with'}{" "}
             <span className="text-ink">Next.js 16</span>{" "}
             &amp;{" "}
             <span className="text-ink">TypeScript</span>

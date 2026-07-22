@@ -45,6 +45,9 @@ export const metadata: Metadata = {
   },
 };
 
+import { LanguageProvider } from "@/contexts/LanguageContext";
+import LanguageModal from "@/components/ui/LanguageModal";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -53,7 +56,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${jetbrainsMono.variable} h-full`}>
       <body className="min-h-full flex flex-col bg-canvas text-ink antialiased">
-        {children}
+        <LanguageProvider>
+          {children}
+          <LanguageModal />
+        </LanguageProvider>
       </body>
     </html>
   );

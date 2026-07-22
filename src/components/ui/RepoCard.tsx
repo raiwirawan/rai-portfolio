@@ -9,8 +9,11 @@
  * @file src/components/ui/RepoCard.tsx
  */
 
+'use client';
+
 import type { Repo } from "@/types/portfolio";
 import Badge from "@/components/ui/Badge";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface RepoCardProps {
   repo: Repo;
@@ -20,6 +23,8 @@ interface RepoCardProps {
  * GitHub repository card with hover interaction and ASCII-style layout.
  */
 export default function RepoCard({ repo }: RepoCardProps) {
+  const { language } = useLanguage();
+
   return (
     <article
       className="card-hover border-hairline p-5 flex flex-col gap-4 bg-canvas"
@@ -49,7 +54,7 @@ export default function RepoCard({ repo }: RepoCardProps) {
 
       {/* ── Description ── */}
       <p className="text-sm text-body leading-relaxed flex-1">
-        {repo.description}
+        {repo.description[language]}
       </p>
 
       {/* ── Tech Stack Badges ── */}
@@ -68,7 +73,7 @@ export default function RepoCard({ repo }: RepoCardProps) {
         style={{ borderRadius: "4px" }}
         aria-label={`View ${repo.name} on GitHub`}
       >
-        View on GitHub →
+        {language === 'id' ? 'Lihat di GitHub →' : 'View on GitHub →'}
       </a>
     </article>
   );
